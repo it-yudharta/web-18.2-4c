@@ -26,7 +26,7 @@ class StudentController extends Controller
      */
     public function create()
     {
-        //
+        return view('students.new');
     }
 
     /**
@@ -37,7 +37,12 @@ class StudentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $student = new Student;
+        $student->name = $request->input('name');
+        $student->address = $request->input('address');
+        $student->old = $request->input('old');
+        $student->save();
+        return redirect('/students');
     }
 
     /**

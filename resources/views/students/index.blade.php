@@ -5,7 +5,10 @@
     <div class="row justify-content-center">
         <div class="col-md">
             <div class="card">
-                <div class="card-header">Daftar Mahasiswa</div>
+                <div class="card-header">
+                    Daftar Mahasiswa
+                    <a class="btn-sm btn-primary float-right" href="{{ route('students.create') }}" role="button">Tambah</a>
+                </div>
 
                 <div class="card-body">
                     {{ $students->links() }}
